@@ -9,37 +9,46 @@ Some screenshots of the style:
 ![](https://ooo.0o0.ooo/2017/06/19/59473e8d26abe.jpg)
 ![](https://ooo.0o0.ooo/2017/06/19/59473e8d2a7dd.jpg)
 
-Main features:
+Integrated features:
 + Quick deploy, one command and ready to go
 + Nice and clean color scheme
 + Curated fonts
 + Vim keybinding via
     [jupyter-vim-binding](https://github.com/lambdalisue/jupyter-vim-binding)
++ Dashboard view via [dashboards](https://github.com/jupyter/dashboards)
++ Extensions manager via
+    [jupyter_contrib_nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
 
 Platforms supported:
 + macOS
-+ Linux (needs modification of the target path in Makefile)
++ Linux (needs modification of the target paths in Makefile)
 
 ## How to install
-If you don't want Vim key-binding feature, then just download or clone this repo,
-and under the repo folder, run the command in your terminal:
+If you want to install all the features, just download or clone this repo, and run the command
+under the repo folder:
+```bash
+make
+```
+
+If you only want the basic style, just run
 ```bash
 make basic
 ```
 
-If you want to have Vim key-binding feature, continue with
+If you want to have other particular features, for instance, the Vim key-binding feature, continue with
 ```bash
 make vim
 ```
-or just
-```bash
-make
-```
-in the very first beginning.
+
+Available features so far:
++ basic
++ vim
++ dashboard
++ nbextensions
 
 Then open your Jupyter notebook and you can tell the difference.
 
-## Some important shortcuts if Vim keybinding is enabled
+## Some important customized shortcuts if Vim keybinding is enabled
 + `i` to enter insert mode
 + `Ctrl-[` to exit insert mode
 + `Ctrl-]` to enter Jupyter mode
