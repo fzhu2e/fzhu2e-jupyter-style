@@ -16,8 +16,9 @@ dashboard:
 	jupyter dashboards quick-setup --sys-prefix
 
 nbextensions:
-	pip install jupyter_contrib_nbextensions
+	pip install jupyter_contrib_nbextensions jupyter_nbextensions_configurator
 	jupyter contrib nbextension install --user
+	jupyter nbextensions_configurator enable --user
 
 clean:
 	rm -rf ~/.jupyter/*
@@ -28,4 +29,4 @@ clean:
 	jupyter dashboards quick-remove --sys-prefix
 	pip uninstall jupyter_dashboards
 	# nbextensions
-	pip uninstall jupyter_contrib_nbextensions
+	pip uninstall jupyter_contrib_nbextensions jupyter_nbextensions_configurator
