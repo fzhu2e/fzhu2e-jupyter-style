@@ -5,11 +5,11 @@ basic:
 	cp -r ./jupyter/custom ~/.jupyter
 
 vim:
-	mkdir -p ~/Library/Jupyter/nbextensions
-	cp -r ./jupyter/vim_binding ~/Library/Jupyter/nbextensions/
-	cd ~/Library/Jupyter/nbextensions/vim_binding
+	mkdir -p $$(jupyter --data-dir)/nbextensions
+	cp -r ./jupyter/vim_binding $$(jupyter --data-dir)/nbextensions
+	cd $$(jupyter --data-dir)/nbextensions/vim_binding
 	jupyter nbextension enable vim_binding/vim_binding
-	defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false # fix the problem of macOS that one cannot repeat keys in textfield
+	# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false # fix the problem of macOS that one cannot repeat keys in textfield
 
 dashboard:
 	pip install jupyter_dashboards
