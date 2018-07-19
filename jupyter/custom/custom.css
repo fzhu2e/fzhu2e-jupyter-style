@@ -32,6 +32,10 @@ div.body {
  background: #ffffff;
  -webkit-font-smoothing: antialiased !important;
 }
+div.run_this_cell {
+    display: none;
+}
+
 body.notebook_app {
  padding: 0;
  background-color: #ffffff;
